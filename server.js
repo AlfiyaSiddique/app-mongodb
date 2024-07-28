@@ -1,5 +1,19 @@
 const express = require("express");
 const ejs = require("ejs");
+const mongoose = require('mongoose')
+
+let db;
+
+try {
+    db = mongoose.connect('mongodb://localhost:27017/mydatabase', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    });
+    console.log('MongoDB connected successfully');
+ } catch (err) {
+      console.error(err.message);
+}
+
 
 const app = express();
 
