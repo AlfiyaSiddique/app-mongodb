@@ -13,24 +13,24 @@ app.get("/", (request, response)=>{
     response.render("index")
 })
 
-// Get the page for find user by id 
+// Get the page for find employee by email
 app.get("/find", (request, response)=>{
-    response.render("findUser")
+    response.render("findemployee")
  })
 
-//  Finds a user with id and renders all the user data
+//  Finds an employee with email and renders all the employee data
 
 
-// Delete a user
+// Delete an employee
 
 
-//  Get update page for  user
+//  Get update page for  employee
 
 
-//  Add user
+//  Add employee
 
 
-// Update a user
+// Update an employee
 
 
 app.listen(80, ()=>{
