@@ -15,10 +15,10 @@
 <body>
  <script>
     function makeRequest(path, method, ...data) {
-      let requestBody = { id: data[0] }
       if (method === "PUT") {
-        requestBody.fName = data[1]
-        requestBody.lName = data[2]
+        requestBody.fName = data[0]
+        requestBody.lName = data[1]
+        requestBody.email = data[2]
         requestBody.age = data[3]
         requestBody.occupation = data[4]
       }

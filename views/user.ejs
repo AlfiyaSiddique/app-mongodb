@@ -1,12 +1,12 @@
 <%- include("header.ejs") %>
   <div class="container">
-    <h1 class="text-bg-primary mb-3">View User</h1>
+    <h1 class="text-bg-primary mb-3">View Employee</h1>
     <div class="card mb-3" style="width: 18rem;">
       <div class="card-header">
-        User Id
+        Employee Id
       </div>
       <div>
-        <%= user.id %>
+        <%= employee._id %>
       </div>
     </div>
     <div class="card mb-3" style="width: 18rem;">
@@ -14,7 +14,7 @@
         First Name
       </div>
       <div>
-        <%= user.fName %>
+        <%= employee.fName %>
       </div>
     </div>
     <div class="card mb-3" style="width: 18rem;">
@@ -22,7 +22,15 @@
         Last Name
       </div>
       <div>
-        <%= user.lName %>
+        <%= employee.lName %>
+      </div>
+    </div>
+    <div class="card mb-3" style="width: 18rem;">
+      <div class="card-header">
+        Email
+      </div>
+      <div>
+        <%= employee.email %>
       </div>
     </div>
     <div class="card mb-3" style="width: 18rem;">
@@ -30,7 +38,7 @@
         Age
       </div>
       <div>
-        <%= user.age %>
+        <%= employee.age %>
       </div>
     </div>
     <div class="card mb-3" style="width: 18rem;">
@@ -38,12 +46,12 @@
         Occupation
       </div>
       <div>
-        <%= user.occupation %>
+        <%= employee.occupation %>
       </div>
     </div>
     <div>
-      <a href="/update-page/<%= user.id %>"><button type="button" class="btn btn-primary">Update</button></a>
-      <button type="button" onclick="makeRequest('/delete/<%= user.id%>', 'DELETE')"  class="btn btn-danger">Delete</button>
+      <a href="/update-page/<%= employee.id %>"><button type="button" class="btn btn-primary">Update</button></a>
+      <button type="button" onclick="makeRequest('/delete/<%= employee._id%>', 'DELETE')"  class="btn btn-danger">Delete</button>
       <a href="/"><button type="button" class="btn btn-primary">Exit</button></a>
     </div>
 

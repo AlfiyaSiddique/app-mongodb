@@ -1,13 +1,13 @@
 <%- include("header.ejs") %>
 
     <div class="container">
-        <form id="userForm" action="/user" method="get">
-            <h1 class="text-bg-primary p-3">Search User</h1>
+        <form id="userForm" action="/read" method="post">
+            <h1 class="text-bg-primary p-3">Search Employee</h1>
             <div class="mb-3">
-                <label for="occupation" class="form-label">User Id</label>
-                <input type="number" class="form-control" id="userid" placeholder="Enter User Id" name="id" required>
+                <label for="occupation" class="form-label">Employee Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Employee Email Id" name="email" required>
               </div>
-              <button type="submit" class="mb-3 btn btn-primary">Find User</button>
+              <button type="submit" class="mb-3 btn btn-primary">Find Employee</button>
         </form>
     </div>
 
