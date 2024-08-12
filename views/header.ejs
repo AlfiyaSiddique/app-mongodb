@@ -15,7 +15,7 @@
 <body>
  <script>
     function makeRequest(path, method, ...data) {
-      let requestBody = {}
+      let requestBody = { id: data[0] }
       if (method === "PUT") {
         requestBody.fName = data[0]
         requestBody.lName = data[1]
