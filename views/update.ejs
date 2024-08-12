@@ -3,7 +3,7 @@
       <h1 class="text-bg-primary p-3">Update Employee</h1>
         <div class="mb-3">
           <label for="id" class="form-label">Employee Id</label>
-          <input type="number" class="form-control" id="id" placeholder="Employee Id" name="id" value="<%=employee._id%>"
+          <input type="text" class="form-control" id="id" placeholder="Employee Id" name="id" value="<%=employee._id%>"
             readonly>
         </div>
         <div class="mb-3">
@@ -42,9 +42,10 @@
       function makeUpdateRequest(){
         const fName = document.getElementById("fName").value
         const lName = document.getElementById("lName").value
+        const email = document.getElementById("email").value
         const age = document.getElementById("age").value
         const occupation = document.getElementById("occupation").value
-        makeRequest('/update', 'PUT', '<%= employee._id%>', fName,lName,age,occupation)
+        makeRequest('/update', 'PUT', '<%= employee._id%>', fName,lName,email,age,occupation)
       }
     </script>
 
